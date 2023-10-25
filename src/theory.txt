@@ -1,0 +1,173 @@
+q.2) I)
+valueObject{
+
+    index = null; 
+    repeat = 0; 
+
+    constructor(index){
+        this index = index
+        repeat = 1; 
+    }
+
+    incrementRepeat -> {
+        repeat += 1 
+    }
+}
+
+func(array nums){
+
+    if(!nums){
+        return 
+    }
+
+    Hashmap = Hashmap: key value, value: valueObject 
+
+    for i in nums -> {    
+        //If there no object in our Hashmap that has a key of nums[i], then create one, and construct a valueobject with the nums[i] as the key and i as the starting index. 
+        if(!Hashmap.containsKey(nums[i])){
+            new valueObject = valueObject(i);
+            //Set the key to nums[i], and the object to the new object we created above. 
+            Hashmap.set(nums[i],valueObject);
+        }
+        //If there some value in the Hashmap that has a value in the nums at i
+        else if( Hashmap.containsKey(nums[i]) ){
+            Hashmap.nums[i].incrementRepeat();
+        }
+    }
+
+    return Hashmap; 
+}
+
+a) So we initially create an object that has 3 values, a key value called which is the value in the array, its index where -
+it first appears in the array, and the number of times it appears in the array (repeat). From there, we create a new Hashtable - 
+takes in objects of type valueObject which is our object we created. After that we'll iterate through the array nums i times and do the following checks.
+Firstly, we see if the value of the ith value in the array appears in the Hashtable, if it doesnt, we create a new object -
+with its starting index, value, and set its repeat attribute to 1. If it the i'th value in the array appears in the hashmap, we'll -
+call a function that increments the repeat attribute of that object by one. 
+
+b) The big-O time complexity of this solution is O(n) as we iterate through the nums array n times, and searching for a key in our Hashmap is O(1).
+
+c) the Big-Ω time complexity of this is... !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+d) the Big-O space complexity of this is O(n), as in the upper bound of this function we're allocating n objects in our Hashtable.
+
+
+q.2) II)
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+func findConsecutiveNums(array nums){
+
+    if(!nums){
+        return
+    }
+
+    stack values
+    queue indecies
+
+    for i in nums -> {
+        if(nums[i] != stack[i]){
+            nums[i] push -> stack
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
+
+q.3)
+
+given a & b, find a pair in nums that modulo to x. 
+
+I)
+
+valueObject{
+
+    val index = null;
+    val value = null;
+
+    constructor(index, value){
+        this value = value
+        this index = index
+    }
+
+}
+
+function moduloToTarget(array nums, x){
+
+    if(!nums){
+        return
+    }
+
+    list = ArrayList type: valueObject
+
+    for i in nums -> {
+        value a = nums[i];
+
+        for j in nums -> {
+
+            value b = nums[j];
+                if(nums[i] % nums[j] == x){
+
+                    array pair = array[2]; 
+
+                    obj1 = new valueObject(i, nums[i])
+                    obj2 = new valueObject(j, nums[j])
+
+                    pair.push(obj1, obj2)
+                    list.push(pair)
+
+                } else if(nums[j] % nums[i] == x){
+                    array pair = array[2]; 
+
+                    obj1 = new valueObject(i, nums[i])
+                    obj2 = new valueObject(j, nums[j])
+
+                    pair.push(obj1, obj2);
+
+                    list.push(pair)
+                }
+
+        }
+
+    }
+
+    //this will obviously be formatted. 
+    print(list); 
+
+}
+
+
+II) Here we're creating an object, that has 2 key value pairs, with the index and the value of the number in the array nums. 
+In the function we create a nested for loop that checks each possible combonation of each pair in j and i. if there is a pair 
+thats modulo is of our target value x, then we create a array that stores the pair after that, we create 2 objects, set their value and indecies to their respected value and indecies in the nums array, and push (add) that into our map, and repeat until we have no more combonations.  
+
+III) The time complexity is O(n^2) as we're iterate through nums n*n times to find and compute each combonation of values. The space complexity is O(log(n)) as in our upper-bound, we're allocating n/2 times space in our memory, to store a pair of objects in our hashmap.
+
+IV)
+
+q.4) 
+
+i) f(n) = 10^5n log(n) + n^3   ;  g(n) = log(n)
+
+Big-O: f(n) is O(g(n)) if f(n) <= cg(n), this isnt true as any as n gets increasingly larger f(n) increases larger than any c value multiplied by g(n) which makes this false
+
+Big-Ω: f(n) is Ω(g(n)) if f(n) >= cg(n), this is true as for any n > 0, this statement holds true. 
+ 
+
+ii) f(n) = 2log(n^2)  ;  g(n) = (log(n))^2
+
+Big-O: f(n) is O(g(n)) if f(n) <= cg(n), This is false as for any n > 0, this statement doesnt hold
+2log(n^2) <= (log(n))^2, n > 0 
+
+Big-Ω: f(n) is Ω(g(n)) if f(n) >= cg(n), this is true as for any n > 0, this statement holds true. 
+2log(n^2) >= (log(n))^2, n > 0 
+
+iii)
+
+
