@@ -153,6 +153,8 @@ IV)
 
 q.4) 
 
+** Assuming that n E Z ** 
+
 i) f(n) = 10^5n log(n) + n^3   ;  g(n) = log(n)
 
 Big-O: f(n) is O(g(n)) if f(n) <= cg(n), this isnt true as any as n gets increasingly larger f(n) increases larger than any c value multiplied by g(n) which makes this false
@@ -169,5 +171,21 @@ Big-Ω: f(n) is Ω(g(n)) if f(n) >= cg(n), this is true as for any n > 0, this s
 2log(n^2) >= (log(n))^2, n > 0 
 
 iii)
+
+f(n) = log(n^2) + n^3 g(n) = log(n) + 5
+
+Big-Ω: f(n) is Ω(g(n)) if f(n) >= cg(n), this is true as for any n > 0, this statement holds true. 
+log(n^2) + n^3 >= log(n) + 5,  , n E Z^+
+
+iv) 
+f(n) = n√(n) + log(n) g(n) = log(n^2)
+
+Big-O: f(n) is O(g(n)) if f(n) <= cg(n), This is true as for any n > 0, this statement doesnt hold
+n√(n) + log(n) <= clog(n^2), n > 0 
+
+v) f(n) = 2^n + 10^n ; g(n) = 10n^2
+
+Big-Ω: f(n) is Ω(g(n)) if f(n) >= cg(n), this is true as for any n > 0, this statement holds true. 
+2^n + 10^n >= 10n^2, n E Z^+
 
 
