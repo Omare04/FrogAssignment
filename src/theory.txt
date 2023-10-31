@@ -189,3 +189,4 @@ Big-Ω: f(n) is Ω(g(n)) if f(n) >= cg(n), this is true as for any n > 0, this s
 2^n + 10^n >= 10n^2, n E Z^+
 
 
+!!! question about v)
